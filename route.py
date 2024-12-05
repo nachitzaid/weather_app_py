@@ -88,6 +88,7 @@ def add_forecast(id):
             precepitaion=GetData.DataMeteo[id]['precipitation'],
             wind_speed=(int(GetData.DataMeteo[id]['wind']["min"]) + int(GetData.DataMeteo[id]['wind']["max"]))/2,
             cloud_cover=GetData.DataMeteo[id]['cloud'],
+            
         )
         db.session.add(forecast)
         db.session.commit()
